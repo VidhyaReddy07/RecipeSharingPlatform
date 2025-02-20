@@ -1,0 +1,73 @@
+/* Container for the About Us Page */
+.about-container {
+    background-color: #f0f2f5;
+    padding: 2rem 4rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* About Us Heading */
+  .about-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  /* About Us Content */
+  .about-content {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Button for Action */
+  .about-btn {
+    margin-top: 2rem;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover Effect on About Button */
+  .about-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 2rem 2rem;
+    }
+  
+    .about-heading {
+      font-size: 2rem;
+    }
+  
+    .about-content {
+      font-size: 1rem;
+    }
+  
+    .about-btn {
+      font-size: 1rem;
+    }
+  }
+  
