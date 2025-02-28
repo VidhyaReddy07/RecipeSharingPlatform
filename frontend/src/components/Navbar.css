@@ -1,0 +1,162 @@
+/* Global Styles for Smooth Transitions */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181818; /* Dark background, Netflix/YouTube-inspired */
+  padding: 10px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Header (Logo & Title) */
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-title:hover {
+  color: #ff0000; /* YouTube red on hover */
+}
+
+/* Navbar Links Container */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Remove Underlines from Links */
+.navbar-links li a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  text-decoration: none;  /* Removes underline */
+  display: inline-block;
+}
+
+/* Navbar Link Hover Effect */
+.navbar-links li a:hover {
+  background-color: #ff0000; /* YouTube Red */
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Active Link Style */
+.navbar-links li a.active {
+  background-color: #e50914; /* Netflix red */
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Login/Register Button Style */
+.navbar-links li a:last-child {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.navbar-links li a:last-child:hover {
+  background-color: #e50914; /* Netflix Red Hover */
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50px;
+  padding: 5px 15px;
+  width: 250px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  padding: 5px;
+  outline: none;
+  width: 80%;
+}
+
+.search-bar button {
+  background-color: #333;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #ff0000;
+}
+
+/* Navbar Mobile Style */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .navbar-links li {
+    margin-left: 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .navbar-title {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
